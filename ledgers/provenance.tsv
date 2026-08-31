@@ -1,0 +1,61 @@
+component_id	kind	repo_or_source	commit_or_sha256	path_or_url
+V-01	doc	(vendor public document)	16b81274d56f	https://learn.microsoft.com/en-us/dynamics365/customer-service/use/oc-monitor-real-time-customer-sentiment-sessions
+V-02	doc	(vendor public document)	25bb429a3be9	https://www.qualtrics.com/support/xm-discover/data-enrichments/sentiment-discover/
+V-03	doc	(vendor public document)	e1d27b239b27	https://www.qualtrics.com/support/survey-platform/data-and-analysis-module/text-iq/sentiment-analysis/
+V-04	doc	(vendor public document)	df8175a95bf6	https://support.zendesk.com/hc/en-us/articles/4685355428250-Viewing-intelligent-triage-predictions-in-tickets
+V-05	doc	(vendor public document)	732501677abc	https://noldus.com/download/document/facereader-technical-specifications
+V-06	doc	(vendor public document)	c24c6ded6c46	https://www.morphcast.com/how-to-interpret-the-emotion-ai-output-data/
+C-01	repo	serengil/deepface	a2a24a748d67ab7ba19ee8813584f123c8b48747	deepface/models/demography/Emotion.py
+C-01	repo	serengil/deepface	a2a24a748d67ab7ba19ee8813584f123c8b48747	deepface/modules/streaming.py
+C-02	repo	openvinotoolkit/open_model_zoo	4d4266fbbb7eb5ab80944c2800d7f304868d573d	demos/interactive_face_detection_demo/cpp/visualizer.cpp
+C-02	repo	openvinotoolkit/open_model_zoo	4d4266fbbb7eb5ab80944c2800d7f304868d573d	visualizer.hpp
+C-03	repo	cosanlab/py-feat	64ed4b172da1f2e5beb40b8c9692c40a39daf651	feat/data.py
+C-03	repo	cosanlab/py-feat	64ed4b172da1f2e5beb40b8c9692c40a39daf651	feat/utils/__init__.py
+C-03	repo	cosanlab/py-feat	64ed4b172da1f2e5beb40b8c9692c40a39daf651	feat/version.py
+C-04	repo	justadudewhohacks/face-api.js	a86f011d72124e5fb93e59d5c4ab98f699dd5c9c	src/draw/drawFaceExpressions.ts
+C-04	repo	justadudewhohacks/face-api.js	a86f011d72124e5fb93e59d5c4ab98f699dd5c9c	src/faceExpressionNet/FaceExpressions.ts
+C-04	repo	justadudewhohacks/face-api.js	a86f011d72124e5fb93e59d5c4ab98f699dd5c9c	src/utils/index.ts
+C-05	repo	ros4hri/hri_visualization	cad9b32d088f62e7701608559c83b154229672c5	hri_visualization/visualization.py
+C-06	repo	justinshenk/fer	83a3627a314ef23be501a02c0356cc1d47d44b70	src/fer/fer.py
+C-06	repo	justinshenk/fer	83a3627a314ef23be501a02c0356cc1d47d44b70	src/fer/utils.py
+C-07	repo	codertheashish/Emotion-Detection	51b90f0963d77f80576ba563d0f0d4b6a2e1e36c	components/buildBars.js
+C-07	repo	codertheashish/Emotion-Detection	51b90f0963d77f80576ba563d0f0d4b6a2e1e36c	components/updateUI.js
+C-07	repo	codertheashish/Emotion-Detection	51b90f0963d77f80576ba563d0f0d4b6a2e1e36c	utils/emotions.js
+C-08	repo	susantabiswas/realtime-facial-emotion-analyzer	e9d5ee19aebe7602de91ba57ade15a6655944ed6	emotion_analyzer/emotion_detector.py
+C-08	repo	susantabiswas/realtime-facial-emotion-analyzer	e9d5ee19aebe7602de91ba57ade15a6655944ed6	emotion_analyzer/media_utils.py
+C-09	repo	Samarth-Kumar-Samal/Text-Emotion-Classification-using-NLP	6b5b22c29509f2fbff89abeeb9c3dc9fb92a7875	app.py
+C-10	repo	face-analysis/emonet	49eef301513686d6cfd8304682d3ba7216baf398	demo_video.py
+C-11	repo	ryomo/emo	5ff1b261b49eef1cd7cddbfc9f5b6c64f2e1e9f7	src/components/emotion/EmotionDisplay2D.vue
+C-11	repo	ryomo/emo	5ff1b261b49eef1cd7cddbfc9f5b6c64f2e1e9f7	src/types/emotion.ts
+S1-03	repo	PunithVT/ai-avatar-system	8c6de705ae1748af3cb1acf853bd405033eaaa68	frontend/components/ChatInterface.tsx
+S1-05	repo	Emotion-Cognizant/ghackathon	ea521cd2c5be87c2a9b539927594eb9101390896	templates/showdata.html
+S1-07	repo	carluqcor/EmotionFaceRecognition	45fdfb1ebc3c5db67a64cba5b2fbb6ac6d7cbf86	Executables/demo.py
+S1-09	repo	filmicaesthetic/Art-and-Music	7859799b4e99ffa8e2e5bc2cecbe996453aba6ac	Poetry Analysis/Visual Emotions/app.R
+S1-11	repo	chirag03200/AI-ML-by-Cynbit	59afa01c4627b786b07fa7e0771883aeefd2e47f	Emotion-detector App/emotion.py
+S1-14	repo	woodyk/Symbiote	103b11933add6bd339bdbba13e48e100c985bb8e	docs/reference/microexpression.py
+S1-24	repo	0713406390/emotion_detection_tool_system	c65965219973e8b00660fcd864064b0cba2d7739	src/examples.py
+S1-26	repo	SOMESH2014/emotion-detection1	5e9c4dfa38ec79c99898325c47078a58e112a2f9	emotion_detection.py
+S1-30	repo	longyunfeigu/DaBoss	73621fc665f6ff35d1461d0b6431fbf09dfe1c80	frontend/src/components/EmotionSidebar.css
+S1-33	repo	Shakhaout-Hossain/Audio-To-Emotion-Detection-In-Real-Time-with-Spectrum-Analyzer	6a208933051cb9992ff1a2d0477a474ef52287d1	static/js/EmotionChart.js
+S1-43	repo	HanzalahHabib/Emotion-Detector-Streamlit-App-Multiple-Trained-Models-	ce00f8f112a0b9ed8f33fa5cdf2eec24ed2f28b9	app.py
+S1-44	repo	karmaboy1309/emotion-ai	d64e74585eeb10acb45d91cf8c0782e43b669362	app.py
+S1-46	repo	karthik-0211/Speech_Emotion_Detection	4f48df1d273dd7acacdd31fca00b9dae856e9073	app.py
+S1-51	repo	jai3546/AI_ROCKERS	4b6b597e3238a471c2ff126e1d5b6e4d4c4dbf6b	components/tracking/emotion-display.tsx
+S1-56	repo	PRIYANSHU2026/DataSentience-AIML	d258ba50636c6d92071e476bf398ec41ff6d0286	src/Healthcare/Emotion Recognition Based on NLP/streamlit_app.py
+S1-57	repo	suryaremanan/emotionedge	764bfc033992cc842ff00ec1b05640f037f95722	streamlit_app.py
+S1-59	repo	hridaydevkar/EmotionRecognitionSystem	01c1d658867c8b0286394eccf7cebb3c75e96c1e	frontend/src/pages/Analytics.tsx
+S1-60	repo	BITBCI/neurallens-ai	093d7532fee953a04b6ab92fa75823b0458f5da7	src/components/emotion/EmotionMeshTab.tsx
+S2-030	repo	MBombeck/HealthLog	13d808ccffddf70c2339e5371c7f4f35c865eeca	src/components/insights/mood/mood-prognosis-card.tsx
+S5-004	repo	ControlNet/emolysis	c6bd15df40c868ad46e143da96d938513d62692e	src/components/AffectiveBarPlot.vue
+S5-005	repo	ControlNet/emolysis	c6bd15df40c868ad46e143da96d938513d62692e	src/components/AffectiveLinePlot.vue
+S5-018	repo	Capedbitmap/poster-v2-webcam-fer	3524636cc2219392cf599f72f61ade1e83167b68	src/webcam_emotion.py
+S5-021	repo	utsanjan/Emotion-Recognition	133800d9f596a4633acc26ae0e3838efcf71156f	scripts/webcam_demo.py
+S5-022	repo	Prasaderp/ResNet50-Emotion-Recognition-FER2013	4475f75b9c82378bc7155c9b17bcf357c220bb40	realtime_facial_analysis.py
+S5-027	repo	tarunbhat-coet/multimodal-emotion-recognition	7054a1c6e8af53d47728ab7e395607be6eb10b6b	realtime_application_new.py
+S1-59	repo	hridaydevkar/EmotionRecognitionSystem	156b7eeb2673f2c3caf94c6b6b1ffa515a06e5f1	frontend/src/components/EmotionGauge.tsx
+S1-59	repo	hridaydevkar/EmotionRecognitionSystem	156b7eeb2673f2c3caf94c6b6b1ffa515a06e5f1	frontend/src/utils/helpers.ts
+S1-60	repo	BITBCI/neurallens-ai	4fcf1a07f4403c98458914c0163ddb36c9cef28f	src/components/emotion/EmotionMeter.tsx
+S1-24	repo	0713406390/emotion_detection_tool_system	c65965219973e8b00660fcd864064b0cba2d7739	src/utils.py
+S1-30	repo	longyunfeigu/DaBoss	f55df1e3eb97480a83ef86d48ef8133911a0a8fc	frontend/src/components/EmotionSidebar.tsx
+S1-60	repo	BITBCI/neurallens-ai	4fcf1a07f4403c98458914c0163ddb36c9cef28f	src/utils/canvasDrawing.ts
+S1-24	repo	0713406390/emotion_detection_tool_system	c65965219973e8b00660fcd864064b0cba2d7739	src/emotion_detector.py

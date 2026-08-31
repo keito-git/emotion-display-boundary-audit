@@ -1,0 +1,43 @@
+component_id	layer	boundary_type	boundary_treatment	state_origin	judgment_call	user_facing	kindlmann_class	multi_valued_note	judgment_source	exclusion_note	class_norm	mechanism
+V-01	L1	OVERRIDE (outside the boundary)	MISLEADING(感情外の語彙的引き金が水準を上書きし、測定された水準と区別できない)	human_inferred	false	vendor_product	confuser		adjudication_record_1.md		confuser	OVERRIDE
+V-02	L1	B2	MISLEADING(N/A を Neutral として着色)	human_inferred	false	vendor_product	confuser		adjudication_record_1.md		confuser	DEFAULT_SUPPLY
+V-03	L1	UNDET	-	human_inferred	false	vendor_product	UNDET (not determinable from the frozen artefact)		adjudication_record_1.md	§3-5 から外した決め手は【解像度が食い違わないこと】である。最も寛容に整数5水準と読んでも、6個のアイコンに対して5水準であり、桁が開かない。水準数が当該頁から確定できないことは付随条件であって決め手ではない。V-05/S5-004/S5-005 は『水準数は確定できないが、複数符号化の並存は確定する』ため計上側であり、V-03 とは理由が異なる。同じ文言で扱いを分けないこと。	UNDET	
+V-04	L1	surface-dependent	MISLEADING(ヘッダ面が確信度を持たず、確信度の異なる2状態が同一表示になる)	human_inferred	false	vendor_product	confuser		adjudication_record_1.md		confuser	CONFIDENCE_DROP
+V-05	L1	-	-	human_inferred	false	vendor_product	3-5-b (number of levels not determinable)		adjudication_record_1.md	計上側。複数符号化の並存は凍結物から確定するが、各符号化の水準数が確定できないため §3-5-b。V-03 は『解像度が食い違わない』ため対象外であり、理由が違う。	3-5-b	
+V-06	L1	-	98個のaffectのうち、名前を保つビューに現れるのは上位10個。残り88個は名前を保つビューに現れない	human_inferred	false	vendor_product	confuser		adjudication_record_1.md		confuser	VOCABULARY
+C-01	L1	B1	CODED(凍結中である旨);MISLEADING(凍結窓の間は現在の被写体を区別しない)	human_inferred	false	oss_component	confuser	同一境界に印と潰しが同居。単一値では表せない	adjudication_record_2.md		confuser	STALE
+C-02	L1	B2 (both directions)	MISLEADING(operator[] が 0.0f);ABSENT(表示語彙外)	human_inferred	true	oss_component	confuser		adjudication_record_2.md		confuser	DEFAULT_SUPPLY
+C-03	L1	UNDET (no material)	-	human_inferred	true	oss_component	UNDET (no material)		adjudication_record_2.md	描画本体が凍結物にない(feat.plotting は別モジュール)	UNDET	
+C-04	L1	B3	ABSENT(閾値下は行ごと落ちる)	human_inferred	false	oss_component	confuser (sub-threshold band)		adjudication_record_2.md		confuser	THRESHOLD
+C-05	L1	-	感情定数25個のうちpngを持つのは6個。残り19個は描画規則を持たず単一の無描画クラスに落ちる。19個どうしのC(19,2)=171対が区別されない。FURIOUS/ASLEEP/EXCITEDはいずれもこの19個に含まれる	human_inferred	false	oss_component	confuser	.svgのみ存在するglyphが7個(grin/light-smile/meh/sad-tear/smile-beam/smile/surprise)。コードは.pngを組み立てるため到達しない	adjudication_record_2.md		confuser	VOCABULARY
+C-06	L1	B3	CODED(GRAY+空文字);MISLEADING(丸めて 0.00 になる帯 [0,0.005) を区別しない)	human_inferred	false	oss_component	confuser		adjudication_record_2.md		confuser	ROUNDING
+C-07	L1	B1	CODED	human_inferred	false	oss_component	3-5-a(1001 vs 101)		adjudication_record_2.md		3-5-a	
+C-08	L1	B1	例外 NoFaceDetected(描画に到達しない)	human_inferred	false	oss_component	3-5-a(101/10001/101)		adjudication_record_2.md		3-5-a	
+C-09	L1	B2	CRASH(KeyError)	human_inferred	false	oss_component	out-of-scope (rendering never reached)		adjudication_record_2.md		none	
+C-10	L1	-	int() 切り捨て	human_inferred	false	oss_component	3-5-a(8 vs 512^2)		adjudication_record_2.md		3-5-a	
+C-11	L1	B2	既定 '😐' が neutral と同一(絵文字面のみ)	synthetic_agent	false	oss_component	not classified (display as a whole preserves the distinction)		adjudication_record_2.md		none	
+S1-03	L2_expansion	B2 (both directions)	MISLEADING(|| 'neutral');CRASH(語彙外)	human_inferred	false	repo_artifact	3-1-a(ii)		adjudication_record_3.md		confuser	DEFAULT_SUPPLY
+S1-05	L2_expansion	B2	CODED(Unknown 軸)	human_inferred	false	repo_artifact	jumbler	軸と値の対応が入れ替わり。alpha発の不満足なomega	adjudication_record_3.md		jumbler	
+S1-07	L2_expansion	B1	ABSENT(生フレーム再描画・重ね描きのみ落ちる)	human_inferred	false	repo_artifact	-		adjudication_record_3.md		none	
+S1-09	L2_expansion	missing-value	MISLEADING(is.na -> 0 を alpha へ)	human_inferred	false	repo_artifact	3-1-a(i)		adjudication_record_3.md		confuser	DEFAULT_SUPPLY
+S1-11	L2_expansion	B2	UNREACHABLE	human_inferred	false	repo_artifact	out-of-scope	受け皿のみ。alpha も omega も立たない	adjudication_record_3.md		none	
+S1-14	L2_expansion	B4;時間方向	B4=取得の不成立(if not ret で早期 return)。時間方向=set_height は :67 の 100ms 間隔の分岐の内側、set_array は分岐の外にある。同一画面で映像は毎フレーム更新され、感情の棒は更新されない期間がある。分岐は set_height を 3 箇所(:86 / :97 / :102)支配する。**画面の一部だけが滞留する。**	human_inferred	false	repo_artifact	Discussion(時間方向)	C-01 と S5-022 は画面全体が滞留する型。S1-14 は画面の一部だけが滞留し、どちらが現在の値かを示す印がない。隣で映像が動いていることが、棒も現在の値だと読ませる。	adjudication_record_3.md		none	
+S1-24	L2_expansion	B4	取得の不成立	human_inferred	true	repo_artifact	judgment_call(print 主体) → REACH-UNDET(上流未凍結) 〔訂正 2026-08-29: 『print 主体』は誤り。examples.py は cv2.imshow を 9 箇所呼ぶ。emoji_map.get(...,'😐') は描画に到達しない（呼ばれていない）。EMOTION_COLORS.get(...,BOX_COLOR) は到達するが鍵集合が凍結物の外。〕		adjudication_record_3.md		none	
+S1-26	L2_expansion	B2	MISLEADING(.get(emotion, 0));初期状態も [0]*7	human_inferred	false	repo_artifact	3-1-a(i)		adjudication_record_3.md		confuser	DEFAULT_SUPPLY
+S1-30	L2_expansion	UNDET (no material) 〔訂正 2026-08-29: 『CSS のみ・材料なし』は誤り。EmotionSidebar.tsx(209行)が別目録 frozen/source_s1w にあり、チャート JSX と connectNulls が読める。ただし dot と Tooltip の面で区別が残るため confuser とは確定せず、『材料はあるが判定が単独では確定できない』区分へ。列挙スライスは不変。〕	CSS のみ 〔訂正 2026-08-29: 『CSS のみ・材料なし』は誤り。EmotionSidebar.tsx(209行)が別目録 frozen/source_s1w にあり、チャート JSX と connectNulls が読める。ただし dot と Tooltip の面で区別が残るため confuser とは確定せず、『材料はあるが判定が単独では確定できない』区分へ。列挙スライスは不変。〕	synthetic_agent	false	repo_artifact	UNDET (no material) → 材料はあるが判定が単独では確定できない 〔訂正 2026-08-29: 『CSS のみ・材料なし』は誤り。EmotionSidebar.tsx(209行)が別目録 frozen/source_s1w にあり、チャート JSX と connectNulls が読める。ただし dot と Tooltip の面で区別が残るため confuser とは確定せず、『材料はあるが判定が単独では確定できない』区分へ。列挙スライスは不変。〕		adjudication_record_3.md	CSS のみ。状態から印への写像がない 〔訂正 2026-08-29: この除外理由は撤回。『CSS のみ・材料なし』は誤り。EmotionSidebar.tsx(209行)が別目録 frozen/source_s1w にあり、チャート JSX と connectNulls が読める。ただし dot と Tooltip の面で区別が残るため confuser とは確定せず、『材料はあるが判定が単独では確定できない』区分へ。列挙スライスは不変。〕	UNDET	
+S1-33	L2_expansion	B2	ABSENT(累積グラフで加算されず落ちる)	human_inferred	false	repo_artifact	confuser		adjudication_record_3.md		confuser	ACCUMULATION
+S1-43	L2_expansion	B2	UNREACHABLE(2段の既定値が連鎖ごと)	human_inferred	false	repo_artifact	out-of-scope	2段の既定値が連鎖ごと到達しない	adjudication_record_3.md		none	
+S1-44	L2_expansion	B1	CODED(No face detected の文言)	human_inferred	false	repo_artifact	-		adjudication_record_3.md		none	
+S1-46	L2_expansion	B2	REACH-UNDET(上流未凍結)	human_inferred	false	repo_artifact	-		adjudication_record_3.md	上流 src/predict.py 未凍結	none	
+S1-51	L2_expansion	REACH-UNDET	CODED(unknown 3言語+専用分岐)	human_inferred	false	repo_artifact	-	unknown の発生源が凍結物の外。境界の帰属未確定	adjudication_record_3.md	unknown の発生源が凍結物の外	none	
+S1-56	L2_expansion	B2	CODED(🤔 / #666666);同一境界に落ちる経路も同居	human_inferred	false	repo_artifact	-		adjudication_record_3.md		none	
+S1-57	L2_expansion	B4	CODED(Failed to capture frame)	human_inferred	true	repo_artifact	-	被写体の不在ではない。B1に数えない	adjudication_record_3.md		none	
+S1-59	L2_expansion	B3	unreachable-mark	human_inferred	false	repo_artifact	not classified (display as a whole preserves the distinction)	名前と絵文字は測定された neutral と同一だが、百分率は測定から到達しない(filter が 0.01 超を要求するため Math.round は 1 以上)。C-11 と同じ型。	adjudication_record_3.md	v11 まで misleader(2nd kind) としていたが撤回した(S0 §3-3)。gaugeData が空のとき || の右辺が採られ、まさにその表現から neutral 0% が描かれる。v がこの刺激を産むので第2種の要件を満たさない。	none	
+S1-60	L2_expansion	-	確率的更新(Math.random()<0.1);Sad を優勢候補から除外	human_inferred	false	repo_artifact	outside the framework (mapping is not a function) 〔訂正 2026-08-29: 分類は維持。ただし emojiMap[...] || U+1F610 が描画に到達し、絵文字の面では潰れる。感情名の並記により表示全体では区別が残る（C-11 と同型）。〕		adjudication_record_3.md		none	
+S2-030	L2_expansion	B2/B3	理由別に抑制(reason=no-output-yet);?? 0 も供給	human_inferred	false	repo_artifact	6-9-2 (preserves the distinction)		adjudication_record_4.md		none	
+S5-004	L2_expansion	-	-	human_inferred	false	repo_artifact	3-5-b(props.length 未凍結)		adjudication_record_4.md	計上側。複数符号化の並存は凍結物から確定するが、各符号化の水準数が確定できないため §3-5-b。V-03 は『解像度が食い違わない』ため対象外であり、理由が違う。	3-5-b	
+S5-005	L2_expansion	-	-	human_inferred	false	repo_artifact	3-5-b(props.length 未凍結)		adjudication_record_4.md	計上側。複数符号化の並存は凍結物から確定するが、各符号化の水準数が確定できないため §3-5-b。V-03 は『解像度が食い違わない』ため対象外であり、理由が違う。	3-5-b	
+S5-018	L2_expansion	B1	CODED	human_inferred	false	repo_artifact	-		adjudication_record_4.md		none	
+S5-021	L2_expansion	B4;B1	B4=リサイズ例外;B1=ABSENT	human_inferred	false	repo_artifact	-	リサイズ例外はB4。顔ゼロ時はimshowが外側で走りABSENT	adjudication_record_4.md		none	
+S5-022	L2_expansion	B4;B1	B4=frame is None;B1=MISLEADING(滞留・印なし・キャッシュ描画を現在として出す)	human_inferred	false	repo_artifact	confuser		adjudication_record_4.md		confuser	STALE
+S5-027	L2_expansion	B1	不在時に全フレームを顔として渡す	human_inferred	false	repo_artifact	recorded with qualification (not used in any claim)		adjudication_record_4.md	著者が経路の一部を未完成と宣言(t = torch.randn(1,1536), :222-223)。表示ラベルは映像入力の決定的な関数でない。どの役割で参照してもこの制約が掛かる。	none	

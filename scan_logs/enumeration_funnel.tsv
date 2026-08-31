@@ -1,0 +1,60 @@
+face	stage	rule_or_query	count	ceiling_hit	audited	note
+S1	raw hits (frozen, first wave)	7 frozen queries, GitHub code search, limit 100	644	yes (5 of 7 queries capped at 100)	-	unchanged query strings; retrieval ceiling was already raised in the first wave
+S1	unique repo/path	dedupe	644	-	-	-
+S1	R1 prose-kind files	extension in prose set	366	-	-	README/CHANGELOG/docs/txt etc.
+S1	R2 code-kind files	extension in code set	238	-	-	-
+S1	R3 domain-named	repo or path matches domain regex	158	-	-	-
+S1	audit candidates	R2 AND R3	62	-	62	all 62 frozen at pinned commit; 56 newly audited, 6 already enumerated in the first wave
+S1	second wave	sibling files of 13 E1 exclusions	30 files	-	30	files that were the only thing blocking a readable mapping
+S2	raw hits (first wave)	4 frozen queries, limit 100	316	yes	-	prior state
+S2	raw hits (this wave)	same 4 query strings, limit 1000	2016	yes (mood-tracker and sentiment-dashboard both capped at 1000)	-	QUERY STRINGS UNCHANGED; only the retrieval ceiling was raised
+S2	file trees retrieved	GitHub git/trees HEAD recursive	2016	-	-	80 unreadable or empty
+S2	candidate files (raw)	R2 AND R3 (same rule as S1)	25405	-	-	956 repos  ** -> see correction note at bottom of file
+S2	minus vendored/build paths	node_modules, dist, build, vendor, ...	9512	-	-	-  ** -> see correction note at bottom of file
+S2	basename names the domain	basename matches domain regex	3604	-	-	858 repos  ** -> see correction note at bottom of file
+S2	basename names domain AND display	tightened rule	629	-	80	279 repos; audit slice = top 80 by repository stars  ** -> see correction note at bottom of file
+S5	frozen-equivalent queries (first wave)	3 repo-search queries	0	-	-	mechanical miss; recorded in the first wave log
+S5	this wave	GitHub TOPIC search, 9 topics	3812	yes (3 of 9 topics capped at 1000)	-	FRAME CHANGE: the frame specifies no query string for S5. Change logged: repo-search -> topic search. Both recorded.
+S5	paper/artifact signal in description	regex on description field only	465	-	-	READMEs not fetched; rule recovers the known include face-analysis/emonet as a positive control
+S5	file trees retrieved	GitHub git/trees HEAD recursive	465	-	-	0 unreadable
+S5	basename domain AND display	rule A	5	-	5	very low yield: academic repos rarely name a display component
+S5	generic display/demo basename	rule B (demo/visualize/plot/gui/webcam/realtime)	447	-	22	199 repos; slice = top 22 by stars with domain in the path
+S4	not re-run	-	-	-	-	per PI instruction; 6 includes stand from the first wave
+S3	not re-run	-	-	-	-	npm effectively empty, PyPI blocked by bot challenge; unchanged from the first wave
+
+# =====================================================================
+# [correction 2026-08-26]S2 の中間4行を凍結物から再計算した結果
+# 元の行は消していない。backup retained in the source analysis directory
+# 再計算は raw/s2_trees/*.json（2016 件・うち 80 件が読めない）に対して行った。
+#
+# 段1 candidate files (raw) = 25405
+#   ** 数は再現した。ただし規則の表示が誤り。**
+#   本行は "R2 AND R3 (same rule as S1)" と書くが、S1 の R3 は
+#   build_s1_candidates.py:43 で DOMAIN.search(repo + "/" + path) である。
+#   S2 は build_s2_candidates.py:32 で DOMAIN.search(p)、すなわち path のみ。
+#   S1 と同じ規則を当てると 330751 になる。**同じ規則ではない。**
+#
+# 段2 minus vendored/build paths = 9512
+#   ** 再現しない。正しくは 9181。**
+#   現物 raw/S2_候補一覧.tsv は 9181 行であり、
+#   build_s2_candidates.py の NOISE 正規表現で再計算した値と一致する。
+#   vendor/build のみを除く読みでは 10378 で、これとも一致しない。
+#   **9512 の出所は不明。**
+#
+# 段3 basename names the domain = 3604
+#   ** 再現しない。この段を作ったスクリプトが存在しない。**
+#   9181 から basename が DOMAIN に当たるものを数えると 3492。
+#
+# 段4 basename names domain AND display = 629
+#   ** 現物と一致する。**raw/S2_候補一覧_絞込.tsv は 629 行。
+#   ただし **選別に使った DISPLAY 語彙が記録されていない。**
+#   629 件の basename は全件 DOMAIN に当たるが、
+#   S5 側の DISPLAY 正規表現（fetch_s5_slice.py:17）に当たるのは 462 件のみ。
+#   残り 167 件は dashboard / screen / painter / ui などを含み、
+#   これらの語は**どのスクリプトにも書かれていない。**
+#   fetch_s2_slice.py は既存の絞込ファイルを読むだけで、絞込は行っていない。
+#
+# 結論: 監査スライス 80 件の母集団（629）は現物として存在するが、
+#       **そこへ至る選別規則の一部が記録されていない。**
+#       本文の Limitations に開示する。
+# =====================================================================

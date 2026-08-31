@@ -1,0 +1,13 @@
+component_id	not_run_reason_code	note
+V-01	vendor_product	Vendor product. No executable artefact is available. Runtime verification is not possible in principle.
+V-02	vendor_product	Same as V-01.
+V-03	vendor_product	Same as V-01.
+V-04	vendor_product	Same as V-01.
+V-05	vendor_product	Same as V-01.
+V-06	vendor_product	Same as V-01.
+C-01	not_attempted	Requires downloading pre-trained weights and live camera input. The mechanism is temporal; it cannot be expressed as a pair of static inputs.
+C-03	no_material	The drawing body is absent from the frozen artefact (feat.plotting is a separate module). Also classified as UNDET in the ledger.
+C-06	not_attempted	The mechanism is the same type as C-02 observation 3. Confirmed at a stronger level (L-pixel) on the C-02 side, so C-06 was deprioritised. Requires TensorFlow.
+C-07	out_of_scope	The claim is a §3-5-a enumeration claim. The object of verification is not display collapse.
+C-08	out_of_scope	Same as C-07.
+C-10	out_of_scope	Same as C-07.
