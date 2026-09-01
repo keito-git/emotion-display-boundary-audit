@@ -216,3 +216,16 @@ Contact the authors via the paper's review system.
 
 No GPU is required. All harnesses run on CPU.
 The pre-registered runtime checks require less than 5 minutes total on a standard laptop.
+
+## Licence
+
+MIT. See `LICENSE`.
+
+The copyright line reads "The Authors" while the paper is under anonymous review;
+it will name the author on publication.
+
+**The audited third-party sources are not in this repository and are not covered by
+this licence.** They remain under whatever terms their own projects set. This
+repository holds the criteria fixed in advance, the scan logs, the adjudication
+ledgers, the provenance of the 42 components, the collation scripts, and the
+runtime harnesses, all of which are the authors' own work.
