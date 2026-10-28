@@ -5,7 +5,8 @@
 **This file is the artefact of record**: 43 lines (one header, 42 components),
 13 fields per line, CRLF line endings, exactly as the paper's collation read it.
 
-Two substitutions were applied for anonymisation, and nothing else was touched:
+Two substitutions remove the names of individuals from the record, and nothing
+else was touched:
 
 * `judgment_source` named four internal adjudication records after the person who
   wrote them. Those names are replaced by `adjudication_record_1.md` through

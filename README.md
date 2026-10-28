@@ -1,7 +1,15 @@
 # EmotionConfusers — Code and Data Package
 
-This package accompanies the paper "EmotionConfusers: An Exhaustive Enumeration of
-Confusers in Deployed Emotion Displays" submitted to CHI 2028.
+**Online Resource 1** to the article:
+
+- **Article title**: An Empirical Audit of State Provenance Loss in 42 Deployed
+  Emotion-AI Display Implementations
+- **Journal**: Empirical Software Engineering (Springer)
+- **Author**: Keito Inoshita
+- **Affiliation**: Faculty of Business and Commerce, Kansai University, Osaka, Japan
+- **Corresponding author e-mail**: inosita.2865@gmail.com
+
+The article refers to this package as Online Resource 1.
 
 ---
 
@@ -207,8 +215,8 @@ The pre-registered pair reports MISMATCH (expected; see `runtime/collation.tsv` 
 
 ## 5. License
 
-License terms are to be determined (pending PI decision).
-Contact the authors via the paper's review system.
+MIT, as stated in `LICENSE`. The audited third-party sources are not included and
+are not covered by it; see the note at the end of this file.
 
 ---
 
@@ -221,11 +229,11 @@ The pre-registered runtime checks require less than 5 minutes total on a standar
 
 MIT. See `LICENSE`.
 
-The copyright line reads "The Authors" while the paper is under anonymous review;
-it will name the author on publication.
+The copyright line names the author. This journal uses single-blind review, so the
+package is not anonymised.
 
 **The audited third-party sources are not in this repository and are not covered by
 this licence.** They remain under whatever terms their own projects set. This
 repository holds the criteria fixed in advance, the scan logs, the adjudication
 ledgers, the provenance of the 42 components, the collation scripts, and the
-runtime harnesses, all of which are the authors' own work.
+runtime harnesses, all of which are the author's own work.
